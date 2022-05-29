@@ -1,74 +1,80 @@
-// ! JANGAN DIMODIFIKASI
-/*
-  Data Array Object Pegawai
-  [
+// TODO: Buatlah data dari kedua user di sini
+// Tentukan tipe data dan struktur data yang menurut kalian tepat
+// Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
+const firstUser = {name: 'Monica',
+gender: 'F',
+age: 17,
+email: 'monica@dingdong.com',
+favoriteColor: [
+    'Yellow', 'Pink', 'White', 'Purple'
+],
+isHavePet: true,
+education: [
     {
-      "id": 1,
-      "namaDepan": "Edyth",
-      "namaBelakang": "Roberts",
-      "jenisKelamin": "M"
+        name: 'SD 01',
+        city: 'Jakarta',
+        graduate: 2016
     },
-    ...
-  ]
-*/
-const arrayObjectPegawai = require("./data-customer.json");
+    {
+        name: 'SMP 02',
+        city: 'Jakarta',
+        graduate: 2019
+    },
+    {
+        name: 'SMA 03',
+        city: 'Tangerang',
+        graduate: 0
+    }
+],
+favoriteRestaurant: [
+    'Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Padang', 'Tteok'
+]
+};
+const secondUser = { name: 'Wendy',
+gender: 'M',
+age: 17,
+email: 'wendy@dingdong.com',
+favoriteColor: [
+    'Blue', 'Black', 'Grey'
+],
+isHavePet: false,
+education: [
+    {
+        name: 'SD 02',
+        city: 'Jakarta',
+        graduate: 2010
+    },
+    {
+        name: 'SMP 03',
+        city: 'Bogor',
+        graduate: 2013
+    },
+    {
+        name: 'SMA 01',
+        city: 'Surabaya',
+        graduate: 2016
+    },
+    {
+        name: 'Universitas Maju',
+        city: 'Tangerang',
+        graduate: 0
+    }
+],
+favoriteRestaurant: [
+    'Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Eggy'
+]};
 
-function lakukanLooping(arrPegawai) {
-  // ! JANGAN DIMODIFIKASI
-  let dataYangAkanDilooping = arrPegawai;
+// TODO: Masukkan hasil akhir dari kedua user di sini
+const users = [firstUser, secondUser];
 
-  /*
-    TODO 1: Buatlah sebuah variabel bernama "hasilLooping" 
-      yang berisi gabungan nama depan dan belakang dari masing masing pegawai
-
-      Contoh: ["Aisyah Nirmala", "Mansur Faisal", ...]
-  */
-  let hasilLooping = null;
-
-  /*
-    TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
-      yang berisi jumlah pria dari masing masing pegawai
-  */
-  let jumlahPria = null;
-
-  /*
-    TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
-      yang berisi jumlah wanita dari masing masing pegawai
-  */
-  let jumlahWanita = null;
-
-  /*
-    TODO 4: Buatlah sebuah variabel bernama "komentar"
-      yang akan mengomentari apakah lebih banyak Pria atau Wanita
-      
-      Apabila Pria lebih banyak dari Wanita, maka komentar akan berisi:
-        "Jumlah Pria lebih banyak dari Wanita"
-      Apabila Wanita lebih banyak dari Pria, maka komentar akan berisi:
-        "Jumlah Wanita lebih banyak dari Pria"
-      Apabila imbang, maka komentar akan berisi:
-        "Jumlah Pria dan Wanita berimbang"
-  */
-  let komentar = null;
-
-  // ! JANGAN DIMODIFIKASI
-  return {
-    hasilLooping,
-    jumlahPria,
-    jumlahWanita,
-    komentar,
-  };
+// ! JANGAN MODIFIKASI LINE DI BAWAH
+function main() {
+    console.log(users.length || users.size);
+    console.log(users);
 }
 
-function main(data) {
-  const hasil = lakukanLooping(data || arrayObjectPegawai);
+main();
 
-  console.log(hasil.hasilLooping);
-  console.log(hasil.jumlahPria);
-  console.log(hasil.jumlahWanita);
-
-  return hasil;
-}
-
-main(arrayObjectPegawai);
-
-module.exports = main;
+module.exports = {
+    users
+};
